@@ -6,7 +6,18 @@ void subarr(int arr[],int n,int sum){
     int j=0;
     int i;
     int flag=0;
-    for( i=1;i<n;i++){
+    for( i=1;i<=n;i++){
+        while(curr > sum && j<i-1){//while condition coz u have to remove elements till curr become lesser than sum
+		// u need to add j<i-1 coz j can go beyond size
+            curr=curr - arr[j];
+            j++;
+            //  cout<<"hello"<<curr;
+            // if( curr == sum ){
+            //     cout<<"jere";
+            //     flag=1;
+            //     break;
+            // }
+        }
         // cout<<"hello";
         // curr=curr+arr[i];
         if(curr==sum){
@@ -14,19 +25,17 @@ void subarr(int arr[],int n,int sum){
             flag=1;
             break;
         }
-        else if(curr > sum){
-            curr=curr - arr[j];
-            j++;
-             cout<<"hello"<<curr;
-            if( curr == sum ){
-                flag=1;
-                break;
-            }
+        else if(i<n){
+            curr +=arr[i];
+            // if(curr==sum)
+            //     flag = 1;
+            //     break;
+        }
+        // else{
+            
            
-        }
-        else{
-            curr=curr+arr[i];
-        }
+        // } 
+        
     }
     if(flag==1)
       cout<<j+1<<" "<<i<<endl;
@@ -52,4 +61,4 @@ int main() {
 	    subarr(arr,n,sum);
 	}
 	return 0;
-}// ying asking help today only, all test cases are not getting passed.
+}
