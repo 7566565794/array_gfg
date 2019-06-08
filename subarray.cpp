@@ -52,4 +52,4 @@ int main() {
 	    subarr(arr,n,sum);
 	}
 	return 0;
-}ying asking help today only
+}// ying asking help today only, all test cases are not getting passed.
