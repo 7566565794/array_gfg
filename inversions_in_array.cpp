@@ -10,3 +10,5 @@ int inversion(int arr[],int n){
     }
     return count;
 }
+// this will not lead us amazon trust me ... okay so we are leaving this as if now later we will understand the algorithm 
+//properly and will solve it.
