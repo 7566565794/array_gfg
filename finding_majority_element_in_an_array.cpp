@@ -38,3 +38,5 @@ int main() {
 	}
 	return 0;
 }
+
+// we can do the majority index element later...
