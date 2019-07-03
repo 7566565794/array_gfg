@@ -52,3 +52,23 @@ void span(int arr[],int n,int res[]){
 }
 note : only thing to remember is that stack is storing the index of elements whenever value of element is greater 
 than value of element present at that index then we will simply remove that element from top of index.
+	
+	
+efficient solution:
+in this u just need to think about 1 line and that is lets traverse from rhs u have to keep largest element on to the stack 
+assuming that all the elements on the right of it are less than the top element of the stack
+
+efficient solution is corerct but i think there is some problem in gfg test case yet just keep this  in doubt if this
+problem can be rectified
+
+void leader(int arr[],int n){
+    int max_elem=arr[n-1];
+    cout<<max_elem<<" ";
+    for(int i=n-1;i>=0;i--){
+        if(arr[i]>max_elem){
+            max_elem=arr[i];
+            cout<<max_elem<<" ";
+        }
+    }
+}
+
